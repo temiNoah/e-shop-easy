@@ -41,7 +41,7 @@ const HeroSlider = () => {
                 "description": "Powerful laptop for work and gaming.",
                 "price": 999.99,
                 "unit": "Piece",
-                "image": "https://example.com/images/laptop.jpg",
+                "image": "https://firebasestorage.googleapis.com/v0/b/ninja-firegram-80354.appspot.com/o/images%2F64330255891d63d1982bfbf6%2Ff0b262b2-b3ae-0096-858c-9b9f5a14689a-1681548950170.jpg?alt=media&token=063a73f3-4e7f-4d26-b077-456d222dbfff",
                 "discount": 5,
                 "availability": true,
                 "brand": "BrandY",
@@ -66,7 +66,7 @@ const HeroSlider = () => {
                 "description": "Premium wireless headphones with noise-cancellation.",
                 "price": 149.99,
                 "unit": "Piece",
-                "image": "https://example.com/images/headphones.jpg",
+                "image": "https://firebasestorage.googleapis.com/v0/b/ninja-firegram-80354.appspot.com/o/images%2F64330255891d63d1982bfbf6%2Ff0b262b2-b3ae-0096-858c-9b9f5a14689a-1681548950170.jpg?alt=media&token=063a73f3-4e7f-4d26-b077-456d222dbfff",
                 "discount": 15,
                 "availability": true,
                 "brand": "SoundMasters",
@@ -103,7 +103,7 @@ const HeroSlider = () => {
                 {
                     slides.map((slide, index) =>
                         <div className="slider__item  mt0" key={index} style={{
-                            backgroundImage: `url(" ${slide.image} ")`,
+                            backgroundImage: `url(""+ ${slide.image})`,
                             backgroundPosition: 'center',
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat'
@@ -115,7 +115,7 @@ const HeroSlider = () => {
                                     <h1 className="text-light mb-4">{slide.description}</h1>
 
                                     <button className="btn reserve__btn mt-4">
-                                        <Link to="/cars">Reserve Now</Link>
+                                        <Link to="/products">Reserve Now</Link>
                                     </button>
                                 </div>
                             </Container>

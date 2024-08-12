@@ -27,7 +27,7 @@ import CustomCarousel from '../../../../components/carousel/Carousel'
 
 function ProductThumbNailView(props) {
     const state = useContext(APIContext);
-    const { getCarList, getAll, searchCars } = state.CarAPI
+    const { getCarList, getAll, searchCars, searchCarsPaginated } = state.MockAPI
     const [productItems, setProductItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [message, setMessage] = useState("");
@@ -40,13 +40,13 @@ function ProductThumbNailView(props) {
     let { fetchNextPage, hasNextPage, isFetchingNextPage, data, status, error } = useInfiniteQuery(
         '/search',
         async ({ pageParam = 1 }) => {
-            const p = await searchCars({ pageNum: pageParam - 1, pageSize: pageSize }); //console.log("calling.....")
+            const p = await searchCarsPaginated({ pageNum: pageParam - 1, pageSize: pageSize }); //console.log("calling.....")
             setLoading(false);
             return p
         },
         {
             getNextPageParam: (lastPage, allPages) => {
-                const pageNum = parseInt(JSON.parse(lastPage.config.data).pageNum)
+                const pageNum = parseInt(JSON.parse(lastPage?.config?.data).pageNum)
                 const total = allPages[0].data.totalDocs
                 const allPageCount = total % pageSize == 0 ? Math.trunc(total / pageSize) : Math.trunc(total / pageSize) + 1;
                 const nextPage = pageNum + 1 + 1
@@ -67,9 +67,11 @@ function ProductThumbNailView(props) {
 
 
     useEffect(() => {
+        alert(JSON.stringify(data))
         // console.log("data:" + JSON.stringify(data))
         if (data?.pages?.length > 0) {
-            //console.log("data:" + JSON.stringify(data))
+           
+        //console.log("data:" + JSON.stringify(data))
             setProductItems(
                 (prev) => {
                     let arr = []
@@ -106,35 +108,6 @@ function ProductThumbNailView(props) {
             setLoading(false)
 
     }, [data]);
-
-
-
-    // useEffect(
-    //     (data) => {
-    //         getAll().then(
-    //             (res) => {
-    //                 setLoading(false);
-    //                 setProductItems(
-    //                     res.data.map((item, index) =>
-    //                     ({
-    //                         id: index,
-    //                         name: item.manufacturer,
-    //                         price: item.sellingPrice,
-    //                         imgUrl: item.images[0]
-    //                     }
-    //                     )))
-    //             },
-    //             (error) => {
-    //                 const msg = error.data.msg;
-    //                 props.showErrorMessage(msg);
-    //                 setTimeout(() => { props.dismissErrorMessage() }, parseInt(process.env.REACT_APP_TOAST_DURATION_SHORT));
-    //                 setLoading(false);
-    //                 setMessage(error.description);
-
-    //             }
-    //         );
-    //     },
-    //     []);
 
 
     const intersectionObserver = useRef()

@@ -10,23 +10,38 @@ import ErrorMessage from './components/modal/errorMessage'
 import InfoMessage from './components/modal/infoMessage'
 import store from './redux/store';
 import { AuthUserProvider } from "./context/AuthUserContext";
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 function App() {
+  const twentyFourHoursInMs = 1000 * 60 * 60 * 24;
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+        refetchOnmount: false,
+        refetchOnReconnect: false,
+        retry: false,
+        staleTime: twentyFourHoursInMs,
+      },
+    },
+  })
   return (
-    <AuthUserProvider>
-    <Provider store={store}>
-          <SuccessMessage />
-          <ErrorMessage />
-          <InfoMessage />
-          <APIProvider>
-            <ShoppingCartProvider>
-                  <Router>
-                    <Routers />
-                  </Router>
-          </ShoppingCartProvider>
-        </APIProvider>
-     </Provider>
-    </AuthUserProvider> 
+    <QueryClientProvider client={queryClient}>
+        <AuthUserProvider>
+            <Provider store={store}>
+                  <SuccessMessage />
+                  <ErrorMessage />
+                  <InfoMessage />
+                  <APIProvider>
+                    <ShoppingCartProvider>
+                          <Router>
+                            <Routers />
+                          </Router>
+                  </ShoppingCartProvider>
+                </APIProvider>
+            </Provider>
+        </AuthUserProvider> 
+    </QueryClientProvider>
   );
 }
 

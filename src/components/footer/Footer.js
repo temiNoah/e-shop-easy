@@ -44,15 +44,18 @@ const Footer = () => {
                         <div className="logo footer__logo">
                             <h1>
                                 <Link to="/home" className=" d-flex align-items-center gap-2">
-                                    <i class="ri-car-line"></i>
+                                    {/* <i class="ri-car-line"></i> */}
+                                    <i class="ri-shopping-cart-2-line"></i>
                                     <span>
-                                        {/* Rent <br/> */}  Car Service
+                                        {/* Rent <br/> */}  E-Shop Easy 
                                     </span>
                                 </Link>
                             </h1>
                         </div>
                         <p className="footer__logo-content">
-                            With our vast fleet of quality vehichles,diversity is our strength. Whatever your driving preferences, we have a vehicle to match. From sleek sedans to spacious SUVs, our extensive fleet is meticulously maintained to ensure you drive away in style, comfort, and, above all, safety.
+                            With our vast number of quality products,diversity is our strength.
+                            Whatever your purchase preferences, we have a products to match.
+                           
                         </p>
                     </Col>
 

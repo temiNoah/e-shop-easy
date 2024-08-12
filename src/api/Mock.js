@@ -21,7 +21,7 @@ function MockAPI() {
             "description": "High-end smartphone with advanced features.",
             "price": 599.99,
             "unit": "Piece",
-            "image": "https://example.com/images/smartphone.jpg",
+            "image": require("../assets/iphone.jpg"),
             "discount": 10,
             "availability": true,
             "brand": "BrandX",
@@ -46,7 +46,7 @@ function MockAPI() {
             "description": "Powerful laptop for work and gaming.",
             "price": 999.99,
             "unit": "Piece",
-            "image": "https://example.com/images/laptop.jpg",
+            "image": require("../assets/laptop.jpeg"),
             "discount": 5,
             "availability": true,
             "brand": "BrandY",
@@ -71,7 +71,7 @@ function MockAPI() {
             "description": "Premium wireless headphones with noise-cancellation.",
             "price": 149.99,
             "unit": "Piece",
-            "image": "https://example.com/images/headphones.jpg",
+            "image": require("../assets/earphone.jpg"),
             "discount": 15,
             "availability": true,
             "brand": "SoundMasters",
@@ -96,7 +96,7 @@ function MockAPI() {
             "description": "Feature-packed smartwatch with fitness tracking.",
             "price": 199.99,
             "unit": "Piece",
-            "image": "https://example.com/images/smartwatch.jpg",
+            "image": require("../assets/wristwatch2.jpg"),
             "discount": 10,
             "availability": true,
             "brand": "TechWear",
@@ -121,7 +121,7 @@ function MockAPI() {
             "description": "High-quality DSLR camera for photography enthusiasts.",
             "price": 499.99,
             "unit": "Piece",
-            "image": "https://example.com/images/camera.jpg",
+            "image": require("../assets/cream.jpg"),
             "discount": 5,
             "availability": true,
             "brand": "PhotoPro",
@@ -146,7 +146,7 @@ function MockAPI() {
             "description": "High-definition smart TV with built-in streaming apps.",
             "price": 799.99,
             "unit": "Piece",
-            "image": "https://example.com/images/tv.jpg",
+            "image": require("../assets/tv.jpg"),
             "discount": 8,
             "availability": true,
             "brand": "ViewTech",
@@ -171,7 +171,7 @@ function MockAPI() {
             "description": "Compact tablet for productivity and entertainment.",
             "price": 299.99,
             "unit": "Piece",
-            "image": "https://example.com/images/tablet.jpg",
+            "image": require("../assets/mouse.jpg"),
             "discount": 12,
             "availability": true,
             "brand": "TabTech",
@@ -196,7 +196,7 @@ function MockAPI() {
             "description": "Next-gen gaming console for immersive gaming experiences.",
             "price": 399.99,
             "unit": "Piece",
-            "image": "https://example.com/images/console.jpg",
+            "image": require("../assets/jakeShoe.jpg"),
             "discount": 10,
             "availability": true,
             "brand": "GameX",
@@ -221,7 +221,7 @@ function MockAPI() {
             "description": "Modern refrigerator with energy-saving features.",
             "price": 599.99,
             "unit": "Piece",
-            "image": "https://example.com/images/refrigerator.jpg",
+            "image": require("../assets/speaker.jpg"),
             "discount": 5,
             "availability": true,
             "brand": "CoolTech",
@@ -331,6 +331,11 @@ function MockAPI() {
 
     const searchCars = (filter) => {
         const data = {data: {data:products}}
+        return Promise.resolve(data)
+    }
+
+    const searchCarsPaginated = (filter) => {
+        const data = { data: { pages: products } }
         return Promise.resolve(data)
     }
 
@@ -447,7 +452,8 @@ function MockAPI() {
         searchByFilterSet,
         getAllCarBrands,
         getAllCarModels,
-        getAllCarYears
+        getAllCarYears,
+        searchCarsPaginated
     }
 
 }

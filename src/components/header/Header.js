@@ -32,16 +32,16 @@ const navLinks = [
         path: "/product",
         display: "Product",
     },
-    {
-        id: 3,
-        path: "#",
-        display: "Cars",
-    },
-    {
-        id: 4,
-        path: "/contact",
-        display: "Contact",
-    },
+    // {
+    //     id: 3,
+    //     path: "#",
+    //     display: "Cars",
+    // },
+    // {
+    //     id: 4,
+    //     path: "/contact",
+    //     display: "Contact",
+    // },
 ];
 const submenu = [3]
 const submenuItem = [
@@ -109,79 +109,7 @@ const Header = () => {
             </div>
 
             {/* =============== header middle =========== */}
-            {/* <div className="header__middle">
-        <Container>
-          <Row>
-            <Col lg="4" md="3" sm="4">
-              <div className="logo">
-                <h1>
-                  <Link to="/home" className=" d-flex align-items-center gap-2">
-                    <i class="ri-car-line"></i>
-                    <span>
-                      Rent Car <br /> Service
-                    </span>
-                  </Link>
-                </h1>
-              </div>
-            </Col>
-
-            <Col lg="3" md="3" sm="4">
-              <div className="header__location d-flex align-items-center gap-2">
-                <span>
-                  <i class="ri-earth-line"></i>
-                </span>
-                <div className="header__location-content">
-                  <h4>Bangladesh</h4>
-                  <h6>Sylhet City, Bangladesh</h6>
-                </div>
-              </div>
-            </Col>
-
-            <Col lg="3" md="3" sm="4">
-              <div className="header__location d-flex align-items-center gap-2">
-                <span>
-                  <i class="ri-time-line"></i>
-                </span>
-                <div className="header__location-content">
-                  <h4>Sunday to Friday</h4>
-                  <h6>10am - 7pm</h6>
-                </div>
-              </div>
-            </Col>
-
-            <Col
-              lg="2"
-              md="3"
-              sm="0"
-              className=" d-flex align-items-center justify-content-end "
-            >
-              <button className="header__btn btn ">
-                <Link to="/contact">
-                  <i class="ri-phone-line"></i> Request a call
-                </Link>
-              </button>
-            </Col>
-          </Row>
-        </Container>
-      </div> */}
-
-            {/* <div className="header__midde">
-            <Container>
-                  <Row>
-                      <Col lg="4" md="3" sm="4">
-                         <div className="logo">
-                            <h1>
-                  <Link to="/home" className=" d-flex align-items-center gap-2">
-                          <img src={require('../../assets/all-images/logo.jpg')} style={{width:'100px',height:'100px'}}/>
-                   
-                  </Link>
-                </h1>
-                          </div>
-                          </Col>
-                  </Row>
-            </Container>
-        </div> */}
-
+            
             {/* ========== main navigation =========== */}
 
             <div className="main__navbar">
