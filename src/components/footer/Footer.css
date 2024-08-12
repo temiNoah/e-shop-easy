@@ -1,0 +1,121 @@
+.footer {
+    background-image: url('../../assets/footer-bg-min.jpeg') !important;
+    /*#000d6b;*/
+    padding-top: 50px;
+    padding-bottom: 15px;
+    background-size: cover !important;
+    background-position: 50% 0 !important;
+    padding: 160px 0 80px;
+    position: relative
+}
+
+.footer__logo i {
+    color: #fff;
+    font-weight: 400;
+}
+
+.footer__logo span {
+    color: #fff;
+    font-weight: 500;
+}
+
+.footer__logo-content {
+    color: rgba(255, 255, 255, 0.715);
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+.quick__link {
+    border: none !important;
+    background: transparent !important;
+}
+
+.quick__link a {
+    color: rgba(255, 255, 255, 0.715);
+    text-decoration: none;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.quick__link a:hover {
+    color: #f9a826;
+}
+
+.footer__link-title {
+    color: #fff;
+}
+
+.office__info {
+    color: rgba(255, 255, 255, 0.715);
+    font-weight: 300;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border: 1px solid #7c8a972f;
+    border-radius: 50px;
+    background: #fff
+        /*#020a4de9;*/
+}
+
+.newsletter input {
+    background: transparent;
+    color: #000;
+    border: none;
+    outline: none;
+}
+
+.newsletter span i {
+    color: #000;
+}
+
+.footer__bottom {
+    border-top: 1px solid #7c8a972f;
+}
+
+.f {
+    max-width: 22vw;
+    position: absolute;
+    z-index: 2;
+    top: -20px;
+    left: 0;
+}
+
+.footer__decor {
+    height: 47px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 94% 100%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 94% 100%, 0 0);
+    position: absolute;
+    top: 0;
+    right: 84px;
+    left: 84px;
+    display: block;
+    background-color: #fff;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .footer__logo-content {
+        font-size: 0.8rem;
+    }
+
+    .quick__link,
+    .office__info {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+
+    .footer__link-title {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .footer__bottom p {
+        font-size: 0.7rem;
+    }
+
+
+}

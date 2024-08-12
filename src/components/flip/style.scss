@@ -1,0 +1,53 @@
+.content {
+    // background-color: var(--white);
+
+    .test {
+        animation: vZKGD 3s linear infinite alternate-reverse !important;
+        // animation-play-state: paused;
+        background: linear-gradient(135deg, #fa00ff, #00e0ff 50%, #fa00ff) !important;
+        width: 100%;
+        background-size: 500%;
+
+    }
+
+    .test2 {
+        background-color: val(--blue);
+    }
+
+
+    @keyframes vZKGD {
+        0% {
+            background-position: 100% 0;
+        }
+
+        100% {
+            background-position: 12% 100%;
+        }
+    }
+}
+
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    animation: #{$str};
+}
+
+@include keyframes(fade) {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

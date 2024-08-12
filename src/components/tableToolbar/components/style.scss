@@ -1,0 +1,91 @@
+/**
+ search box style
+ */
+
+.tableToolbar-wrapper {
+
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    height: 150px;
+
+    padding: 30px;
+
+
+
+    .car-table-form-group {
+
+        display: flex;
+        flex-direction: row;
+        flex-basis: content;
+        width: 100%;
+        gap: 10px;
+        margin-right: 10px;
+        // justify-content: space-between;
+
+
+        label {
+            color: #000;
+        }
+
+
+
+
+        .form-control {
+            outline: none;
+            border: none !important;
+            overflow: visible;
+            touch-action: manipulation;
+            text-align: center;
+            appearance: auto;
+            font-family: Poppins-Regular;
+            font-size: 15px;
+            color: #555;
+            line-height: 1.2;
+            display: inline;
+            width: 150px;
+            height: 40px;
+            padding: 0 5px;
+            border: 1px solid rgba(124, 138, 151, 0.184) !important;
+            border-radius: 50px;
+            background: rgb(242, 246, 247) !important;
+
+        }
+
+        label {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 100;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .submit_btn {
+            background-image: -webkit-gradient(linear, left top, right top, from(#70bafe), color-stop(51%, #998dff), to(#70bafe));
+            background-image: -webkit-linear-gradient(left, #70bafe 0%, #998dff 51%, #70bafe 100%);
+            background-image: -o-linear-gradient(left, #70bafe 0%, #998dff 51%, #70bafe 100%);
+            background-image: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
+            background-size: 200% auto;
+            z-index: 2;
+            width: 60px;
+            height: 30px;
+            padding: 0px;
+            display: inline-block;
+            -webkit-transition: all 400ms ease-out;
+            -o-transition: all 400ms ease-out;
+            transition: all 400ms ease-out;
+            text-align: center;
+            outline: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            color: #fff;
+            font-size: 15px;
+            font-family: "Roboto", sans-serif;
+            // line-height: 58px;
+            border: 0px solid rgba(204, 241, 255, 0.5);
+            border-radius: 33px;
+            margin-top: 6px;
+        }
+
+
+    }
+}

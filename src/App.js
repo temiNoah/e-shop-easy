@@ -1,24 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import Routers from "./router/Router";
+import { BrowserRouter as Router } from "react-router-dom";
+import { APIProvider } from "./context/APIContext";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext"
+import { Provider } from 'react-redux';
+import SuccessMessage from './components/modal/successMessage'
+import ErrorMessage from './components/modal/errorMessage'
+import InfoMessage from './components/modal/infoMessage'
+import store from './redux/store';
+import { AuthUserProvider } from "./context/AuthUserContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthUserProvider>
+    <Provider store={store}>
+          <SuccessMessage />
+          <ErrorMessage />
+          <InfoMessage />
+          <APIProvider>
+            <ShoppingCartProvider>
+                  <Router>
+                    <Routers />
+                  </Router>
+          </ShoppingCartProvider>
+        </APIProvider>
+     </Provider>
+    </AuthUserProvider> 
   );
 }
 

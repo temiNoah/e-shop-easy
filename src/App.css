@@ -1,17 +1,87 @@
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --bgcolor: #F3F2F0;
+  /* --fontfamily:; */
+  --formfontweight: 400;
+  --bgcolorsuccessmodal: #d4edda;
+  /*#00D084 */
+  --bgcolorerrormodal: #ff0000;
+  --bginfomodal: #FFF2CD;
+}
+
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: var(--bgcolor);
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
+
+.success-modal {
+  background-color: var(--bgcolorsuccessmodal);
+  border: 0px solid var(--bgcolorsuccessmodal) !important;
+  border-radius: 5px;
+  color: #000;
+  border-color: #c3e6cb;
+  position: absolute;
+  /*sticky;*/
+  transform: translateX(120%);
+  top: 2%;
+  z-index: 999999;
+  width: 30%;
+  height: 45px;
+  display: flex;
+  justify-content: center
+}
+
+.error-modal {
+  background-color: var(--bgcolorerrormodal);
+  border: 0px solid var(--bgcolorerrormodal) !important;
+  border-radius: 5px;
+  color: #fff;
+  position: absolute;
+  transform: translateX(120%);
+  top: 2%;
+  z-index: 999999;
+  width: 30%;
+  display: flex;
+  justify-content: center
+}
+
+.info-modal {
+  background-color: var(--bginfomodal);
+  border: 0px solid var(--bginfomodal) !important;
+  border-radius: 5px;
+  color: #000;
+  position: absolute;
+  transform: translateX(120%);
+  top: 2%;
+  z-index: 999999;
+  width: 30%;
+  display: flex;
+  justify-content: center
+}
+
+.clear {
+  display: none !important;
+}
+
+/** all the icons color*/
+
+i {
+  /* color: #22ABC3*/
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;
@@ -32,7 +102,55 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .success-modal {
+    background-color: var(--bgcolorsuccessmodal);
+    border: 0px solid var(--bgcolorsuccessmodal) !important;
+    border-radius: 5px;
+    color: #155724;
+    border-color: #c3e6cb;
+    position: sticky;
+    transform: translateY(50%);
+    top: 2%;
+    z-index: 999999;
+    /* width: 20%; */
+    display: flex;
+    justify-content: center
+  }
+
+  .error-modal {
+    background-color: var(--bgcolorerrormodal);
+    border: 0px solid var(--bgcolorerrormodal) !important;
+    border-radius: 5px;
+    position: sticky;
+    transform: translateY(50%);
+    color: #fff;
+    top: 2%;
+    /* width: 50%; */
+    z-index: 999999;
+    /*2147483638*/
+    display: flex;
+    justify-content: center
+  }
+
+  .info-modal {
+    background-color: var(--bginfomodal);
+    border: 0px solid var(--bgcolorsuccessmodal) !important;
+    border-radius: 5px;
+    color: #000;
+    border-color: #c3e6cb;
+    position: sticky;
+    transform: translateY(50%);
+    top: 2%;
+    z-index: 999999;
+    /* width: 20%; */
+    display: flex;
+    justify-content: center
   }
 }

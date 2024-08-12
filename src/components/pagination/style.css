@@ -1,0 +1,94 @@
+.Table__itemCount {
+    /* margin-top: 10px; */
+    font-size: 14px;
+    width: auto;
+    /* display: ; */
+    position: absolute;
+    top: 100px;
+
+}
+
+.Table__pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 10px;
+}
+
+.Table__pageButton {
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.Table__pageButton:disabled {
+    cursor: not-allowed;
+    color: gray;
+}
+
+.Table__pageButton--active {
+    color: #45b3e3;
+    font-weight: bold;
+}
+
+.pagination-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #fff;
+
+}
+
+.pagination-wrapper>div>.dropdown {
+    /* margin: 10px !important; */
+    background: transparent;
+    /*rgba(223, 224, 225);
+    /* background-image: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%); */
+    border-radius: 5px;
+    height: 35px;
+}
+
+.pagination-wrapper>div>.dropdown>.btn {
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 0px;
+}
+
+.pagination-wrapper>div>.dropdown>.btn:hover {
+    color: #000 !important;
+    /* background-color: #fff; */
+}
+
+.dropdown-menu.show {
+    width: 100% !important;
+    min-width: 80px !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+}
+
+/* .pagination-wrapper .btn {
+    background: transparent;
+} */
+.pagination-wrapper>div>.dropdown :nth-child(1) {
+    background: transparent;
+    border: none;
+}
+
+.Table__prevPageWrapper {
+    margin-top: 2px;
+}
+
+.Table__nextPageWrapper {
+    margin-top: 2px;
+}
+
+.pagination-wrapper>div {
+    padding: 10px;
+}
+
+.pagination-wrapper>div:nth-child(1) {
+    font-size: 12px;
+    font-weight: 300;
+    /* padding: 2px; */
+}

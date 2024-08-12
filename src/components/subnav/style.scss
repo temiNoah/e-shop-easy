@@ -1,0 +1,24 @@
+.subNav {
+    // max-width: 20%;
+    // padding: 0px 0px 0px 30px !important;
+    opacity: 0.5;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    display: contents;
+    margin-left: 5% !important;
+    // margin: 0px 0px 0px 0px !important;
+
+    .col {
+        padding: 0px;
+        margin: 0px 0px 0px 20px;
+        cursor: pointer;
+        //max-width: 90px;
+        display: inline;
+
+
+        span {
+            font-size: 12px;
+        }
+    }
+}

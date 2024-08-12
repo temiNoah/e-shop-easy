@@ -1,0 +1,108 @@
+.dropdownMenus {
+    position: absolute;
+    left: -250%;
+    top: 150%;
+    width: 200px;
+    height: 200px;
+    text-align: left;
+    background-color: #fff;
+    z-index: 9999;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-items {
+    color: #000;
+}
+
+.menuItem {
+    cursor: pointer;
+    position: relative
+}
+
+.dropdownMenus>li {
+    text-align: left;
+    padding: 0 0px 10px 30px;
+    width: 50%;
+    min-width: 150px;
+    display: block;
+    position: relative;
+    text-transform: capitalize;
+    border-bottom: none;
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 10;
+    text-transform: none;
+}
+
+.menuItem:hover>.dropdownMenus {
+    top: 150%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+    border: 0px solid;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 5px 0px #000;
+}
+
+@media only screen and (max-width: 768px) {
+    .dropdownMenus {
+        position: absolute;
+        left: 430%;
+        top: 150%;
+        width: 150px;
+        height: 200px;
+        text-align: left;
+        background-color: #fff;
+        z-index: 9999;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0 !important;
+        visibility: hidden;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    ul.dropdownMenus>li {
+        text-align: left;
+        padding: 0 0px 10px 30px;
+        width: 50%;
+        min-width: 150px;
+        display: block;
+        position: relative;
+        text-transform: capitalize;
+        border-bottom: none;
+        font-family: "Montserrat";
+        font-size: 15px;
+        font-weight: 10;
+        text-transform: none;
+    }
+
+    .dropdownMenus.showOnSmallScreen {
+        top: 150%;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1 !important;
+        visibility: visible;
+        z-index: 1000;
+        border: 0px solid;
+        padding: 10px;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 5px 0px #000;
+    }
+
+
+}
