@@ -10,13 +10,20 @@
 }
 
 .slider__item-01 {
-    background: linear-gradient(rgb(0, 13, 107, 0.5), rgb(0, 13, 107, 0.5)), url("../../assets/car-slider-image-1-min.png");
+    background: linear-gradient(rgb(0, 13, 107, 0.5), rgb(0, 13, 107, 0.5)), url("../../assets/iphone.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .slider__item-02 {
-    background: linear-gradient(rgb(0, 13, 107, 0.5), rgb(0, 13, 107, 0.5)), url("../../assets/car-slider-image-2-min.png");
+    background: linear-gradient(rgb(0, 13, 107, 0.5), rgb(0, 13, 107, 0.5)), url("../../assets/laptop.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider__item-03 {
+    background: linear-gradient(rgb(0, 13, 107, 0.5), rgb(0, 13, 107, 0.5)), url("../../assets/earphone.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +36,8 @@
 }
 
 .slider__content {
-    padding-top: 150px;
+    /* padding-top: 150px; */
+    padding: 150px 0px 150px 0px;
 }
 
 .slider__content h1 {

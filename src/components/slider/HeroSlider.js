@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { formatCurrency } from '../../utilities/formatCurrency'
 
 import "./HeroSlider.css";
-
+//https://firebasestorage.googleapis.com/v0/b/ninja-firegram-80354.appspot.com/o/images%2F64330255891d63d1982bfbf6%2Ff0b262b2-b3ae-0096-858c-9b9f5a14689a-1681548950170.jpg?alt=media&token=063a73f3-4e7f-4d26-b077-456d222dbfff
 const HeroSlider = () => {
     const slides =
         [
@@ -16,7 +16,7 @@ const HeroSlider = () => {
                 "description": "High-end smartphone with advanced features.",
                 "price": 599.99,
                 "unit": "Piece",
-                "image": "https://firebasestorage.googleapis.com/v0/b/ninja-firegram-80354.appspot.com/o/images%2F64330255891d63d1982bfbf6%2Ff0b262b2-b3ae-0096-858c-9b9f5a14689a-1681548950170.jpg?alt=media&token=063a73f3-4e7f-4d26-b077-456d222dbfff",
+                "image": "../../assets/iphone.jpg",
                 "discount": 10,
                 "availability": true,
                 "brand": "BrandX",
@@ -41,7 +41,7 @@ const HeroSlider = () => {
                 "description": "Powerful laptop for work and gaming.",
                 "price": 999.99,
                 "unit": "Piece",
-                "image": "https://firebasestorage.googleapis.com/v0/b/ninja-firegram-80354.appspot.com/o/images%2F64330255891d63d1982bfbf6%2Ff0b262b2-b3ae-0096-858c-9b9f5a14689a-1681548950170.jpg?alt=media&token=063a73f3-4e7f-4d26-b077-456d222dbfff",
+                "image": "../../assets/laptop.jpeg",
                 "discount": 5,
                 "availability": true,
                 "brand": "BrandY",
@@ -66,7 +66,7 @@ const HeroSlider = () => {
                 "description": "Premium wireless headphones with noise-cancellation.",
                 "price": 149.99,
                 "unit": "Piece",
-                "image": "https://firebasestorage.googleapis.com/v0/b/ninja-firegram-80354.appspot.com/o/images%2F64330255891d63d1982bfbf6%2Ff0b262b2-b3ae-0096-858c-9b9f5a14689a-1681548950170.jpg?alt=media&token=063a73f3-4e7f-4d26-b077-456d222dbfff",
+                "image": "../../assets/earphone.jpg",
                 "discount": 15,
                 "availability": true,
                 "brand": "SoundMasters",
@@ -102,12 +102,10 @@ const HeroSlider = () => {
         <Slider {...settings} className="hero__slider">
                 {
                     slides.map((slide, index) =>
-                        <div className="slider__item  mt0" key={index} style={{
-                            backgroundImage: `url(""+ ${slide.image})`,
-                            backgroundPosition: 'center',
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat'
-                        }}>
+                        <div 
+                         className={"slider__item-0" + slide.product_id+ " mt0"}
+                         key={index} 
+                        >
                             <Container>
                                 <div className="slider__content ">
                                     <h1>{slide.name}</h1>
