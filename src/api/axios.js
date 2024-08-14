@@ -3,6 +3,7 @@ const BASE_URL = process.env.REACT_APP_BACK_END_BASE_URL //'http://localhost:500
 
 export default axios.create({
     baseURL: BASE_URL,
+    headers: { 'Content-Type': 'application/json' },
     withCredentials: true,
 });
 

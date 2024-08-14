@@ -10,7 +10,7 @@ import { api } from '../api/api'
 // import ExpenseAPI from '../api/resources/expenseAPI';
 
 const {
-    CarAPI,
+    ProductAPI,
     MockAPI,
 } = api;
 
@@ -23,7 +23,7 @@ export const APIProvider = ({ children }) => {
     const state = {
         //  Token: [token, setToken],
         //AuthServiceAPI: AuthServiceAPI(),
-        CarAPI: CarAPI(),
+        ProductAPI: ProductAPI(),
         MockAPI: MockAPI()
        
     }

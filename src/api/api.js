@@ -2,7 +2,7 @@
 //import AuthServiceAPI from './auth.service';
 
 
-import CarAPI from './carAPI'
+import ProductAPI from './ProductAPI'
 import MockAPI from './Mock'
 
 //import FirebaseDB from './firebaseDB'
@@ -10,7 +10,7 @@ import MockAPI from './Mock'
 //export const firebaseDB = new FirebaseDB();
 export const api = {
  
-    CarAPI,
+    ProductAPI,
     MockAPI,
     
 }

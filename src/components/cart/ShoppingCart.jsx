@@ -14,7 +14,7 @@ import { APIContext } from "../../context/APIContext"
 export function ShoppingCart({ isOpen } /*: ShoppingCartProps*/) {
   const { closeCart, cartItems, orderType } = useShoppingCart()
   const state = useContext(APIContext)
-  const { search } = state.CarAPI
+  const { search } = state.ProductAPI
   //const navigate = useNavigate();
 
   //console.log("state :" + JSON.stringify(state))

@@ -7,13 +7,13 @@ import { useState, useEffect, useContext } from 'react'
 //import AuthUserContext from '../../context/AuthUserContext';
 import axiosPrivate from './axios'
 
-function CarAPI() {
+function ProductAPI() {
     const [isLogged, setIsLogged] = useState(false)
     const [isAdmin, setIsAdmin] = useState(false)
     // const [authUser, setAuthUser] = useContext(AuthUserContext)
     //const axiosPrivate = useAxiosPrivate()
 
-    const path = "car/";
+    const path = "/";
 
 
     // useEffect(() => {
@@ -78,7 +78,7 @@ function CarAPI() {
 
     const getAll = async () => {
 
-        const url = path + 'all';
+        const url = path + 'products';
         const response = await axiosPrivate().get(url).catch(
             error => {
                 if (error.response)
@@ -129,7 +129,7 @@ function CarAPI() {
     }
 
     const searchCars = (filter) => {
-        const url = path + 'search';
+        const url = path + 'products';
         const response = axiosPrivate().post(url, { ...filter }).catch(
             error => {
                 if (error.response)
@@ -143,6 +143,7 @@ function CarAPI() {
         return response
         // return new Promise((resolve, reject) => resolve(getDummyTableData()))
     }
+    
 
     const searchByFilterSet = (filter) => {
         const url = path + 'search-by-filter-set';
@@ -161,82 +162,7 @@ function CarAPI() {
     }
 
 
-    const deleteAll = async (dealerId) => {
-        const url = path + "?dealerId=" + dealerId;
-        const response = await axiosPrivate.delete(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
-    const getTotalCount = async () => {
-        const url = path + `totalCount`;
-        const response = await axiosPrivate().get(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
-
-    const getAllCarBrands = async () => {
-        const url = path + `all/brands`;
-        const response = await axiosPrivate().get(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
-    const getAllCarModels = async () => {
-        const url = path + `all/models`;
-        const response = await axiosPrivate().get(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
-    const getAllCarYears = async () => {
-        const url = path + `all/years`;
-        const response = await axiosPrivate().get(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
+   
 
 
 
@@ -252,16 +178,11 @@ function CarAPI() {
         getCarDetails,
         getCarList,
         searchCars,
-        deleteAll,
-        getTotalCount,
         searchByFilterSet,
-        getAllCarBrands,
-        getAllCarModels,
-        getAllCarYears
     }
 
 }
 
-export default CarAPI
+export default ProductAPI
 
 

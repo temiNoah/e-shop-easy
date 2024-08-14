@@ -288,19 +288,8 @@ function MockAPI() {
 
 
     const getAll = async () => {
-
-        const url = path + 'all';
-        const response = await axiosPrivate().get(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
+        const data = {data:{data:products}}
+        return Promise.resolve(data)
 
     }
 
@@ -356,82 +345,6 @@ function MockAPI() {
     }
 
 
-    const deleteAll = async (dealerId) => {
-        const url = path + "?dealerId=" + dealerId;
-        const response = await axiosPrivate.delete(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
-    const getTotalCount = async () => {
-        const url = path + `totalCount`;
-        const response = await axiosPrivate().get(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
-
-    const getAllCarBrands = async () => {
-        const url = path + `all/brands`;
-        const response = await axiosPrivate().get(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
-    const getAllCarModels = async () => {
-        const url = path + `all/models`;
-        const response = await axiosPrivate().get(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
-    const getAllCarYears = async () => {
-        const url = path + `all/years`;
-        const response = await axiosPrivate().get(url).catch(
-            error => {
-                if (error.response)
-                    return Promise.reject(error.response)
-                else if (error.request)
-                    return Promise.reject(error.request)
-                else
-                    return Promise.reject(error)
-            }
-        );
-        return response
-    }
-
 
 
 
@@ -447,12 +360,8 @@ function MockAPI() {
         getCarDetails,
         getCarList,
         searchCars,
-        deleteAll,
-        getTotalCount,
+      
         searchByFilterSet,
-        getAllCarBrands,
-        getAllCarModels,
-        getAllCarYears,
         searchCarsPaginated
     }
 

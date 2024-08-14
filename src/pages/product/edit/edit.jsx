@@ -34,7 +34,7 @@ const EditCar = (props) => {
     const [selectedImg, setSelectedImg] = useState(null);
     const [uploadImgError, setUploadImgError] = useState("")
     const state = useContext(APIContext);
-    const { updateCar } = state.CarAPI
+    const { updateCar } = state.ProductAPI
     const { getById } = state.DealerAPI
 
     const initState = {

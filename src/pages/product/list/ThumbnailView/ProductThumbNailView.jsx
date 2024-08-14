@@ -27,7 +27,7 @@ import CustomCarousel from '../../../../components/carousel/Carousel'
 
 function ProductThumbNailView(props) {
     const state = useContext(APIContext);
-    const { getCarList, getAll, searchCars, searchCarsPaginated } = state.MockAPI
+    const { getCarList, getAll, searchCars, searchCarsPaginated } = state.MockAPI//state.ProductAPI
     const [productItems, setProductItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [message, setMessage] = useState("");
